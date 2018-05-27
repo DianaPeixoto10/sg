@@ -1,12 +1,10 @@
-package SniperGame;
-
-/**
- * Created by codecadet on 25/05/2018.
- */
-public class SoldierEnemy {
-
-    public void hit(int shoot) {
-        return;
+public class SoldierEnemy extends Enemy {
+    public SoldierEnemy(int health) {
+        super(health);
     }
 
+    @Override
+    public void hit(int damage) {
+        super.hit(damage);
+    }
 }

@@ -1,28 +1,38 @@
-package SniperGame;
+import sun.reflect.generics.tree.Tree;
 
 import java.util.Arrays;
 
-/**
- * Created by codecadet on 25/05/2018.
- */
 public class Game {
 
-    private Game_Object[] gameObjects;
+    private GameObject[] gameObjects;
     private SniperRifle sniperRifle;
     private int shotsFired;
+    private Enemy enemy;
+    private Object object;
 
-    public void Game(Game_Object[] gameObjects, SniperRifle sniperRifle, int shotsFired) {
-            this.gameObjects = gameObjects;
-            this.sniperRifle = sniperRifle;
-            this.shotsFired = shotsFired;
-    }
-        public void start() {
-            return;
+    public GameObject[] createObjects(int obNumber) {
+        Object[] gameObjects = Object.values();
+        Object ob = gameObjects[(int) (Math.random() * 3)];
+
+        for (int i = 0; i < obNumber; i++) {
+            switch (ob) {
+                case TREE:
+                    ;
+                    break;
+                case SOLDIERENEMY:
+                    createObjects();
+                    break;
+
+                case ARMOUREDENEMY:
+                    createObjects();
+                    break;
+            }
+            return gameObjects;
+        }
     }
 
-    //CRIAR UM METODO DE TIPO GAMEOBJECTS[] QUE TEM COMO ARGUMENTO UM INTEIRO
-    public createObjects(int obCreator) {
-        return createOb;
+    public void start() {
+
     }
 
     @Override

@@ -1,16 +1,11 @@
-package SniperGame;
+abstract public class Enemy extends GameObject {
 
-/**
- * Created by codecadet on 25/05/2018.
- */
-public abstract class Enemy {
     private int health;
     private boolean isDead;
-    private String message;
 
-    public Enemy(int health, boolean isDead) {
+    public Enemy(int health) {
         this.health = health;
-        this.isDead = isDead;
+        this.isDead = false;
     }
 
     public boolean isDead() {
@@ -21,20 +16,14 @@ public abstract class Enemy {
         return health;
     }
 
-    public void hit(int shoot) {
+    public void hit(int damage) {
         return;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
     @Override
-    public String toString() {
-        return "Enemy{" +
-                "health=" + health +
-                ", isDead=" + isDead +
-                ", message='" + message + '\'' +
-                '}';
+    public String getMessage() {
+        return "ArmouredEnemy";
     }
 }
+
+

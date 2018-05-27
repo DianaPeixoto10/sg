@@ -1,29 +1,10 @@
-package SniperGame;
-
-/**
- * Created by codecadet on 25/05/2018.
- */
-public class ArmouredEnemy {
-
-    private int armour;
-
-    public int getArmour() {
-        return armour;
-    }
-
-    public ArmouredEnemy(int armour) {
-        this.armour = armour;
-    }
-
-    public void hit(int shoot) {
-        return;
+public class ArmouredEnemy extends Enemy {
+    public ArmouredEnemy(int health) {
+        super(health);
     }
 
     @Override
-    public String toString() {
-        return "ArmouredEnemy{" +
-                "armour=" + armour +
-                '}';
+    public void hit(int damage) {
+        super.hit(damage);
     }
 }
-
